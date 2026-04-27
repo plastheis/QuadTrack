@@ -16,8 +16,8 @@ camera:
 
 tracker:
   algorithms:
+    - algorithm: mosse
     - algorithm: nanotrack
-    - algorithm: csrt
       async: true
       async_submit_strategy: "on_completion"   # "on_completion" | "fixed_interval"
       async_min_interval: 3                    # used only with fixed_interval
