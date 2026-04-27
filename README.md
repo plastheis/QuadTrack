@@ -32,8 +32,6 @@ Camera frames → tracker/camera.py → kcf_tracker.py ────────�
 - PySerial
 - ONNX Runtime
 
-Model weights (`.onnx`) are excluded from the repository and must be downloaded separately before running.
-
 ## Changelog
 
 ### 2026-04-07
