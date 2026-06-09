@@ -30,6 +30,15 @@ tracker:
   # nanotrack: RKNN (NPU) — convert from ONNX externally via rknn-toolkit2
   nanotrack_backbone_rknn: models/nanotrackv3/nanotrackv3_backbone.rknn
   nanotrack_head_rknn:     models/nanotrackv3/nanotrackv3_head.rknn
+  # YOLO11s detection-based single-object tracker
+  yolo:
+    model_path: models/yolo/yolo11s_uav.rknn
+    input_size: [640, 640]
+    conf_threshold: 0.25
+    crop_scale: 3.0             # multiplier on bbox size for crop region
+    full_frame_every: 10        # run full-frame detection every N frames
+    max_lost: 10                # frames without match before declaring lost
+    iou_threshold: 0.3          # minimum IoU for detection-track match
 
 # IoU dead-reckoning fusion settings
 fusion_velocity_ema_alpha: 0.1    # EMA smoothing for fast-tracker velocity

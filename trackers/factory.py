@@ -13,6 +13,7 @@ from trackers.kcf_tracker import KCFTracker
 from trackers.csrt_tracker import CSRTTracker
 from trackers.mosse_tracker import MOSSETracker
 from trackers.nanotrack_tracker import NanoTracker
+from trackers.yolo_detection.tracker import YOLOTracker
 from fusion_algs.base import BaseFusionAlgorithm, PassthroughFusion
 
 
@@ -21,6 +22,7 @@ _ALGO_MAP: dict[str, type[BaseTracker]] = {
     "csrt":            CSRTTracker,
     "mosse":           MOSSETracker,
     "nanotrack":       NanoTracker,
+    "yolo_sot":        YOLOTracker,
 }
 
 _FUSION_MAP: dict[str, type[BaseFusionAlgorithm]] = {
